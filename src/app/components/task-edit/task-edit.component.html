@@ -1,0 +1,40 @@
+<div class="task-edit" [formGroup]="taskForm">
+    <div *ngIf="f['title'].dirty || f['title'].touched">
+        <div class="invalid-feedback" *ngIf="f['title'].errors?.required">
+           Title is need required
+        </div>
+    </div>
+    <div class="form-group col-md-12">
+        <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Update a task..." formControlName="title">
+    </div>
+    <div class="form-group col-md-12">
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" formControlName="description" rows="5" ></textarea>
+    </div>
+    <div class="row">
+        <div class="col-md-12 d-flex">
+            <div class="col-md-6">
+                <label for="exampleFormControlTextarea1">Due Date</label>
+                <div class="input-group">
+                    <input class="form-control" placeholder="yyyy-mm-dd"
+                           name="dp"  ngbDatepicker #d="ngbDatepicker" formControlName="dueDate" [minDate]="today">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">Select</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <label for="piority">Piority</label>
+                <select class="custom-select" id="Piority" formControlName="piority">
+                    <option value ="Low">Low</option>
+                    <option value="Normal">Normal</option>
+                    <option value="High">High</option>
+                  </select>
+            </div>
+        </div>
+        
+    </div>
+        
+    <button type="button" class="btn btn-update mt-3 mb-3" (click)="updateTask()">Update</button>
+</div>
+

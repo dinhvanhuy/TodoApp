@@ -1,0 +1,88 @@
+.custom-checkbox {
+    height: 20px;
+    color: #000000;
+    font-family: 'Source Sans Pro';
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    background: rgba(255,255,255,0);
+    border: 1px solid #000000;
+    border-radius: 0px;
+    width: 19px;
+}
+
+.task-title {
+    color: #333333;
+    font-family: 'Source Sans Pro';
+    font-size: 16px;
+    text-align: left;
+    line-height: 12px;
+    padding: 5px;
+    margin: 0px;
+}
+
+.list-btn {
+    height: 50px;
+    line-height: 50px;
+}
+
+
+.btn-detail {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #00BCD4;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.btn-remove {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #D9534F;
+    border: none;
+    border-radius: 10px;
+}
+
+.items-detail {
+    height: 50px;
+    align-items: center;
+}
+
+.list-item {
+    border: 1px solid #BDBDBD;
+}
+
+.list-item :last-child{
+   border-bottom: none;
+}
+
+.footer {
+    border: 1px solid #000000;
+    margin: 0 -21px;
+    border-bottom : none;    
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 27px;
+}
+
+.footer-title {
+    font-size: 18px;
+    line-height: 50px;
+}
+
+.content {
+    position: relative;
+}

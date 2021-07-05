@@ -1,0 +1,27 @@
+.task-edit {
+    width: 100%;
+    border: 1px solid #BDBDBD;
+    margin-top: -16px;
+    border-top: none;
+    padding-top: 10px;
+}
+
+.btn-update {
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #5CB85C;
+    border: none;
+    border-radius: 10px;
+    margin-left: 15px;
+    width: 95%;
+    color: white;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 100%;
+    margin-left: 12px;
+}

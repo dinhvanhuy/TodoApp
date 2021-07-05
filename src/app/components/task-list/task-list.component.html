@@ -1,0 +1,33 @@
+<div class="content">
+    <h3 class="title mb-5">To Do List</h3>
+    <div class="row">
+        <div class="form-group col-md-12">
+            <input type="text" class="form-control search" aria-describedby="emailHelp" placeholder="Search"
+                [formControl]="searchName">
+        </div>
+    </div>
+    <div *ngFor="let task of tasks; let key = index">
+        <div class="col-md-12 d-flex mb-3 list-item">
+            <div class="col-md-8 d-flex items-detail">
+                <input class="custom-checkbox" type="checkbox" [value]="key" (change)="onCheckboxChange($event)">
+                <h3 class="task-title">{{task.title}}</h3>
+            </div>
+            <div class="col-md-4 list-btn">
+                <button class="btn btn-detail mr-4" (click)="getDetail(key)">Detail</button>
+                <button class="btn btn-remove" (click)="removeTask(key)">Remove</button>
+            </div>
+        </div>
+        <div *ngIf="isShow && selectedItem == key">
+            <app-task-edit [id]="key" (isShow)="handleEdit($event)"></app-task-edit>
+        </div>
+    </div>
+    
+    <div class="footer d-flex" *ngIf="showRemoveAll">
+            <div class="col-md-8 footer-title">Bulk Action:</div>
+            <div class="col-md-4 list-btn">
+                <button class="btn btn-primary mr-2">Detail</button>
+                <button class="btn btn-info" (click)="removeItemSelected()">Remove</button>
+            </div>
+     
+    </div>
+</div>
